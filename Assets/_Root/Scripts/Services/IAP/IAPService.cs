@@ -1,17 +1,22 @@
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.Purchasing;
-using Services.Analytics;
-using UnityEngine.Analytics;
-using System;
-using System.Collections.Generic;
-using Profile;
-using Services.Ads.UnityAds;
-using Services.IAP;
 
 namespace Services.IAP
 {
-    internal class IAPService : MonoBehaviour, IStoreListener
+    internal interface IIAPService : IStoreListener
+    {
+        UnityEvent Initialized { get; }
+        UnityEvent PurchaseSucceed { get; }
+        UnityEvent PurchaseFailed { get; }
+
+
+        void Buy(string id);
+        void RestorePurchases();
+        string GetCost(string productID);
+    }
+
+    internal class IAPService : MonoBehaviour, IIAPService
     {
         [Header("Components")]
         [SerializeField] private ProductLibrary productLibrary;
@@ -21,7 +26,7 @@ namespace Services.IAP
         [field: SerializeField] public UnityEvent PurchaseSucceed { get; private set; }
         [field: SerializeField] public UnityEvent PurchaseFailed { get; private set; }
 
-        public bool _isInitialized;
+        private bool _isInitialized;
         private IStoreController _controller;
         private IExtensionProvider _extensionProvider;
         private PurchaseValidator _purchaseValidator;
@@ -81,7 +86,7 @@ namespace Services.IAP
                 return PurchaseProcessingResult.Complete;
             }
 
-            PurchaseSucceed.Invoke();
+            OnPurchaseSucceed(args.purchasedProduct);
             return PurchaseProcessingResult.Complete;
         }
 
@@ -94,6 +99,16 @@ namespace Services.IAP
             PurchaseFailed?.Invoke();
         }
 
+        private void OnPurchaseSucceed(UnityEngine.Purchasing.Product product)
+        {
+            string productId = product.definition.id;
+            decimal amount = (decimal)product.definition.payout.quantity;
+            string currency = product.metadata.isoCurrencyCode;
+            ServiceLocator.Analytics.SendTransaction(productId, amount, currency);
+
+            Log($"Purchased: {productId}");
+            PurchaseSucceed.Invoke();
+        }
 
         public string GetCost(string productID)
         {

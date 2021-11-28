@@ -1,19 +1,19 @@
 using Tool;
 using UnityEngine;
 
-namespace Game.Car
+namespace Game.Transport.Car
 {
-    internal class CarController : BaseController
+    internal class CarController : TransportController
     {
         private readonly ResourcePath _viewPath = new ResourcePath("Prefabs/Car");
         private readonly CarView _view;
 
-        public GameObject ViewGameObject => _view.gameObject;
+        public override GameObject ViewGameObject => _view.gameObject;
 
-        public CarController()
-        {
+
+        public CarController(TransportModel model) : base(model) =>
             _view = LoadView();
-        }
+
 
         private CarView LoadView()
         {

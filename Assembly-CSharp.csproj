@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{0472FB84-7B2C-CE21-7D32-59497DCE6A32}</ProjectGuid>
+    <ProjectGuid>{C6DEEBDF-6545-D446-83AC-DF0A7AF7497E}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -53,58 +53,122 @@
     <UnityVersion>2020.3.22f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Assets\_Root\Scripts\Services\IAP\IAPService.cs" />
+    <Compile Include="Assets\_Root\Scripts\Features\Inventory\Items\ItemConfig.cs" />
+    <Compile Include="Assets\_Root\Scripts\Game\Transport\Boat\BoatController.cs" />
+    <Compile Include="Assets\_Root\Scripts\Services\IAP\PurchaseRestorer.cs" />
+    <Compile Include="Assets\_Root\Scripts\Repository.cs" />
+    <Compile Include="Assets\_Root\Scripts\Features\AbilitySystem\Abilities\AbilityItemConfigDataSource.cs" />
+    <Compile Include="Assets\_Root\Scripts\Features\AbilitySystem\Abilities\AbilityType.cs" />
+    <Compile Include="Assets\_Root\Scripts\Services\Analytics\AnalyticsManager.cs" />
+    <Compile Include="Assets\_Root\Scripts\Tool\ResourceManagement\ContentDataSourceLoader.cs" />
     <Compile Include="Assets\UpdateManager\Scripts\UpdateManager.cs" />
-    <Compile Include="Assets\_Root\Scripts\Ui\Settings\SettingsView.cs" />
     <Compile Include="Assets\_Root\Scripts\Tool\Reactive\SubscriptionProperty.cs" />
+    <Compile Include="Assets\_Root\Scripts\Features\Shed\Upgrade\UpgradeItemConfig.cs" />
+    <Compile Include="Assets\_Root\Scripts\Game\Transport\TransportController.cs" />
     <Compile Include="Assets\_Root\Scripts\Ui\MainMenu\MainMenuView.cs" />
     <Compile Include="Assets\_Root\Scripts\Game\GameController.cs" />
+    <Compile Include="Assets\_Root\Scripts\Features\Shed\Upgrade\IUpgradeHandler.cs" />
     <Compile Include="Assets\_Root\Scripts\Game\TapeBackground\Background.cs" />
+    <Compile Include="Assets\_Root\Scripts\Features\AbilitySystem\IAbilityActivator.cs" />
     <Compile Include="Assets\UpdateManager\Example Scene\Scripts\ExampleEventUpdate.cs" />
-    <Compile Include="Assets\_Root\Scripts\Game\Transport\Boat\BoatModel.cs" />
-    <Compile Include="Assets\_Root\Scripts\Game\InputLogic\InputKeys.cs" />
-    <Compile Include="Assets\_Root\Scripts\Services\IAP\IAPService.cs" />
+    <Compile Include="Assets\_Root\Scripts\Game\Transport\Boat\BoatView.cs" />
+    <Compile Include="Assets\_Root\Scripts\Services\IAP\Settings\Product.cs" />
+    <Compile Include="Assets\_Root\Scripts\Services\Ads\IAdsPlayer.cs" />
+    <Compile Include="Assets\_Root\Scripts\Features\Shed\Upgrade\IUpgradeable.cs" />
+    <Compile Include="Assets\_Root\Scripts\Features\AbilitySystem\Abilities\AbilityButtonView.cs" />
+    <Compile Include="Assets\_Root\Scripts\Services\Analytics\IAnalyticsService.cs" />
+    <Compile Include="Assets\_Root\Scripts\Services\IAP\Settings\ProductLibrary.cs" />
+    <Compile Include="Assets\_Root\Scripts\Tool\CustomText.cs" />
     <Compile Include="Assets\_Root\Scripts\Game\TapeBackground\TapeBackgroundController.cs" />
     <Compile Include="Assets\_Root\Scripts\Tool\ResourceManagement\ResourcesLoader.cs" />
     <Compile Include="Assets\_Root\Scripts\Profile\ProfilePlayer.cs" />
     <Compile Include="Assets\UpdateManager\Example Scene\Scripts\ExampleUpdateManagerUpdate.cs" />
     <Compile Include="Assets\_Root\Scripts\Tool\DontDestroyOnLoadObject.cs" />
+    <Compile Include="Assets\_Root\Scripts\Features\AbilitySystem\AbilitiesRepository.cs" />
     <Compile Include="Assets\_Root\Scripts\Tool\ResourceManagement\ResourcePath.cs" />
     <Compile Include="Assets\_Root\Scripts\Game\TapeBackground\TapeBackgroundView.cs" />
-    <Compile Include="Assets\_Root\Scripts\Services\IAP\Product.cs" />
-    <Compile Include="Assets\_Root\Scripts\Services\IAP\ProductLibrary.cs" />
-    <Compile Include="Assets\_Root\Scripts\Services\Analytics\AnalyticsManager.cs" />
+    <Compile Include="Assets\_Root\Scripts\Features\Inventory\Items\ItemView.cs" />
     <Compile Include="Assets\_Root\Scripts\Game\InputLogic\InputGameController.cs" />
-    <Compile Include="Assets\UpdateManager\Scripts\OverridableMonoBehaviour.cs" />
-    <Compile Include="Assets\_Root\Scripts\Services\Analytics\UnityAnalytics\UnityAnalyticsService.cs" />
+    <Compile Include="Assets\_Root\Scripts\Services\ServiceLocator.cs" />
     <Compile Include="Assets\_Root\Scripts\Services\IAP\PurchaseValidator.cs" />
+    <Compile Include="Assets\UpdateManager\Scripts\OverridableMonoBehaviour.cs" />
+    <Compile Include="Assets\_Root\Scripts\Features\Shed\Upgrade\UpgradeHandlersRepository.cs" />
+    <Compile Include="Assets\_Root\Scripts\Features\Shed\Upgrade\UpgradeItemConfigDataSource.cs" />
+    <Compile Include="Assets\_Root\Scripts\Features\Shed\Upgrade\SpeedUpgradeHandler.cs" />
     <Compile Include="Assets\_Root\Scripts\Game\InputLogic\InputAcceleration.cs" />
     <Compile Include="Assets\_Root\Scripts\Services\Ads\UnityAds\UnityAdsService.cs" />
+    <Compile Include="Assets\_Root\Scripts\Services\Ads\IAdsService.cs" />
     <Compile Include="Assets\UpdateManager\Example Scene\Scripts\Cloner.cs" />
+    <Compile Include="Assets\_Root\Scripts\Features\AbilitySystem\Abilities\GunAbility.cs" />
     <Compile Include="Assets\_Root\Scripts\BaseController.cs" />
     <Compile Include="Assets\_Root\Scripts\Game\Transport\Car\CarView.cs" />
     <Compile Include="Assets\_Root\Scripts\Game\InputLogic\GyroscopeInputView.cs" />
-    <Compile Include="Assets\_Root\Scripts\Game\Transport\TransportState.cs" />
-    <Compile Include="Assets\_Root\Scripts\Services\IAP\PurchaseRestorer.cs" />
-    <Compile Include="Assets\_Root\Scripts\Ui\Settings\SettingsController.cs" />
+    <Compile Include="Assets\_Root\Scripts\Features\Inventory\InventoryModel.cs" />
+    <Compile Include="Assets\_Root\Scripts\Features\Shed\Upgrade\UpgradeType.cs" />
+    <Compile Include="Assets\_Root\Scripts\Game\InputLogic\FloatInputJoystick.cs" />
+    <Compile Include="Assets\_Root\Scripts\Services\Ads\UnityAds\Settings\UnityAdsSettings.cs" />
+    <Compile Include="Assets\_Root\Scripts\Features\AbilitySystem\AbilitiesView.cs" />
+    <Compile Include="Assets\_Root\Scripts\Features\AbilitySystem\Abilities\StubAbility.cs" />
     <Compile Include="Assets\UpdateManager\Example Scene\Scripts\ExampleUnityUpdate.cs" />
-    <Compile Include="Assets\_Root\Scripts\Game\InputLogic\InputJoystickView.cs" />
+    <Compile Include="Assets\_Root\Scripts\Services\Ads\UnityAds\UnityAdsPlayer.cs" />
+    <Compile Include="Assets\_Root\Scripts\Features\Shed\Upgrade\StubUpgradeHandler.cs" />
+    <Compile Include="Assets\_Root\Scripts\Services\Analytics\UnityAnalytics\UnityAnalyticsService.cs" />
     <Compile Include="Assets\UpdateManager\Example Scene\Scripts\Counter.cs" />
+    <Compile Include="Assets\_Root\Scripts\Services\Ads\UnityAds\RewardedAdsPlayer.cs" />
+    <Compile Include="Assets\_Root\Scripts\Services\Ads\UnityAds\Settings\AdsPlayerSettings.cs" />
     <Compile Include="Assets\_Root\Scripts\Game\InputLogic\BaseInputView.cs" />
+    <Compile Include="Assets\_Root\Scripts\Features\Inventory\InventoryView.cs" />
+    <Compile Include="Assets\_Root\Scripts\Features\Inventory\InventoryController.cs" />
+    <Compile Include="Assets\_Root\Scripts\Features\AbilitySystem\Abilities\JumpAbility.cs" />
+    <Compile Include="Assets\_Root\Scripts\Features\AbilitySystem\Abilities\AbilityItemConfig.cs" />
+    <Compile Include="Assets\_Root\Scripts\Features\AbilitySystem\AbilitiesController.cs" />
+    <Compile Include="Assets\_Root\Scripts\Features\Inventory\Items\ItemsRepository.cs" />
+    <Compile Include="Assets\_Root\Scripts\Features\Shed\ShedView.cs" />
     <Compile Include="Assets\_Root\Scripts\MainController.cs" />
+    <Compile Include="Assets\_Root\Scripts\Services\Ads\UnityAds\EmptyPlayer.cs" />
     <Compile Include="Assets\_Root\Scripts\Tool\Reactive\ISubscriptionProperty.cs" />
+    <Compile Include="Assets\_Root\Scripts\Features\AbilitySystem\Abilities\IAbility.cs" />
+    <Compile Include="Assets\_Root\Scripts\Features\Shed\ShedController.cs" />
+    <Compile Include="Assets\_Root\Scripts\Ui\SettingsMenu\SettingsMenuView.cs" />
+    <Compile Include="Assets\_Root\Scripts\Game\InputLogic\InputKeyboard.cs" />
+    <Compile Include="Assets\_Root\Scripts\Features\Inventory\Items\ItemConfigDataSource.cs" />
+    <Compile Include="Assets\_Root\Scripts\Game\InputLogic\InputJoystickView.cs" />
     <Compile Include="Assets\_Root\Scripts\Ui\MainMenu\MainMenuController.cs" />
     <Compile Include="Assets\_Root\Scripts\EntryPoint.cs" />
+    <Compile Include="Assets\_Root\Scripts\Game\Transport\TransportType.cs" />
     <Compile Include="Assets\_Root\Scripts\Game\Transport\Car\CarController.cs" />
-    <Compile Include="Assets\_Root\Scripts\Services\Analytics\IAnalyticsService.cs" />
-    <Compile Include="Assets\_Root\Scripts\Game\InputLogic\FloatInputJoystick.cs" />
-    <Compile Include="Assets\_Root\Scripts\Game\Transport\Boat\BoatView.cs" />
-    <Compile Include="Assets\_Root\Scripts\Game\Transport\Car\CarModel.cs" />
+    <Compile Include="Assets\_Root\Scripts\Services\Ads\UnityAds\InterstitialPlayer.cs" />
+    <Compile Include="Assets\_Root\Scripts\Features\Inventory\Items\Item.cs" />
+    <Compile Include="Assets\_Root\Scripts\Features\Shed\Upgrade\JumpHeightUpgradeHandler.cs" />
     <Compile Include="Assets\_Root\Scripts\Profile\GameState.cs" />
+    <Compile Include="Assets\_Root\Scripts\Game\Transport\TransportModel.cs" />
     <Compile Include="Assets\UpdateManager\Scripts\Utility\Singleton.cs" />
-    <Compile Include="Assets\_Root\Scripts\Game\Transport\Boat\BoatController.cs" />
+    <Compile Include="Assets\_Root\Scripts\Ui\SettingsMenu\SettingsMenuController.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
     <None Include="Assets\UpdateManager\READ ME.txt" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMPro_Mobile.cginc" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF SSD.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface-Mobile.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface.shader" />
+    <None Include="Assets\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Custom-Atlas.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile SSD.shader" />
+    <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMPro_Properties.cginc" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMPro_Surface.cginc" />
+    <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Masking.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF Overlay.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Mobile.shader" />
+    <None Include="Assets\TextMesh Pro\Fonts\LiberationSans - OFL.txt" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_Sprite.shader" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
@@ -680,38 +744,20 @@
     <Reference Include="Purchasing.Common">
       <HintPath>Library\ScriptAssemblies\Purchasing.Common.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.AssetBundleBrowser.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.AssetBundleBrowser.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.InternalAPIEngineBridge.001">
-      <HintPath>Library\ScriptAssemblies\Unity.InternalAPIEngineBridge.001.dll</HintPath>
-    </Reference>
     <Reference Include="Unity.VSCode.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.VSCode.Editor.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.2D.PixelPerfect">
-      <HintPath>Library\ScriptAssemblies\Unity.2D.PixelPerfect.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.2D.Tilemap.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.2D.Tilemap.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Notifications">
-      <HintPath>Library\ScriptAssemblies\Unity.Notifications.dll</HintPath>
-    </Reference>
     <Reference Include="UnityEngine.Purchasing">
       <HintPath>Library\ScriptAssemblies\UnityEngine.Purchasing.dll</HintPath>
-    </Reference>
-    <Reference Include="PsdPlugin">
-      <HintPath>Library\ScriptAssemblies\PsdPlugin.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.2D.Animation.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.2D.Animation.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VisualStudio.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Timeline">
+      <HintPath>Library\ScriptAssemblies\Unity.Timeline.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
       <HintPath>Library\ScriptAssemblies\Unity.TextMeshPro.dll</HintPath>
@@ -721,21 +767,6 @@
     </Reference>
     <Reference Include="UnityEngine.Advertisements">
       <HintPath>Library\ScriptAssemblies\UnityEngine.Advertisements.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.2D.IK.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.2D.IK.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.2D.Psdimporter.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.2D.Psdimporter.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.2D.Path.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.2D.Path.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.InternalAPIEditorBridge.001">
-      <HintPath>Library\ScriptAssemblies\Unity.InternalAPIEditorBridge.001.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.2D.Sprite.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.2D.Sprite.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.UI">
       <HintPath>Library\ScriptAssemblies\UnityEditor.UI.dll</HintPath>
@@ -749,44 +780,20 @@
     <Reference Include="UnityEngine.UI">
       <HintPath>Library\ScriptAssemblies\UnityEngine.UI.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.Notifications.iOS">
-      <HintPath>Library\ScriptAssemblies\Unity.Notifications.iOS.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Mathematics">
-      <HintPath>Library\ScriptAssemblies\Unity.Mathematics.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.2D.IK.Runtime">
-      <HintPath>Library\ScriptAssemblies\Unity.2D.IK.Runtime.dll</HintPath>
-    </Reference>
     <Reference Include="UnityEngine.Purchasing.SecurityCore">
       <HintPath>Library\ScriptAssemblies\UnityEngine.Purchasing.SecurityCore.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.Purchasing.Codeless">
       <HintPath>Library\ScriptAssemblies\UnityEngine.Purchasing.Codeless.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.2D.Animation.Triangle.Runtime">
-      <HintPath>Library\ScriptAssemblies\Unity.2D.Animation.Triangle.Runtime.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.2D.Animation.Runtime">
-      <HintPath>Library\ScriptAssemblies\Unity.2D.Animation.Runtime.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.2D.PixelPerfect.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.2D.PixelPerfect.Editor.dll</HintPath>
+    <Reference Include="Unity.Timeline.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.Timeline.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.Purchasing.Stores">
       <HintPath>Library\ScriptAssemblies\UnityEngine.Purchasing.Stores.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.Mathematics.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.Mathematics.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.2D.Common.Runtime">
-      <HintPath>Library\ScriptAssemblies\Unity.2D.Common.Runtime.dll</HintPath>
-    </Reference>
     <Reference Include="UnityEngine.Monetization">
       <HintPath>Library\ScriptAssemblies\UnityEngine.Monetization.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.2D.SpriteShape.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.2D.SpriteShape.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.Purchasing">
       <HintPath>Library\ScriptAssemblies\UnityEditor.Purchasing.dll</HintPath>
@@ -794,19 +801,10 @@
     <Reference Include="UnityEngine.Advertisements.Editor">
       <HintPath>Library\ScriptAssemblies\UnityEngine.Advertisements.Editor.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.2D.SpriteShape.Runtime">
-      <HintPath>Library\ScriptAssemblies\Unity.2D.SpriteShape.Runtime.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Notifications.Android">
-      <HintPath>Library\ScriptAssemblies\Unity.Notifications.Android.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.2D.Common.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.2D.Common.Editor.dll</HintPath>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
-      <Project>{7E26169A-098B-5034-4FE4-509CB0578C64}</Project>
+      <Project>{05E199BD-D1CF-7A0E-DDF4-436A1F7DC2BF}</Project>
       <Name>Assembly-CSharp-firstpass</Name>
     </ProjectReference>
   </ItemGroup>

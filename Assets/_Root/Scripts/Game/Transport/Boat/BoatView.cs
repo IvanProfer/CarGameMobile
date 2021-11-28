@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace Game.Boat
+namespace Game.Transport.Boat
 {
     internal class BoatView : MonoBehaviour
     {

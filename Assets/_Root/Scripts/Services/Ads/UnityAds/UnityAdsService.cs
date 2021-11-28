@@ -1,67 +1,69 @@
-using System;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.Advertisements;
 
 namespace Services.Ads.UnityAds
 {
-    public class UnityAdsService : MonoBehaviour, IUnityAdsListener, IUnityAdsInitializationListener
+    internal class UnityAdsService : MonoBehaviour, IUnityAdsInitializationListener, IAdsService
     {
-        [SerializeField] private string _gameId = "";
-        [SerializeField] private string _interstitialAds = "";
-        [SerializeField] private string _rewardedAds = "";
-        [SerializeField] private string _bannerAds = "";
+        [Header("Components")]
+        [SerializeField] private UnityAdsSettings _settings;
 
-        private Action _callback;
-        public bool IsInitialized { get; private set; }
+        [field: Header("Events")]
+        [field: SerializeField] public UnityEvent Initialized { get; private set; }
 
-        public event Action Initializaed;
+        public IAdsPlayer InterstitialPlayer { get; private set; }
+        public IAdsPlayer RewardedPlayer { get; private set; }
+        public IAdsPlayer BannerPlayer { get; private set; }
 
-        private void Start()
+
+        private void Awake()
         {
-            Advertisement.Initialize(_gameId, true, false, this);
+            InitializeAds();
+            InitializePlayers();
         }
 
-        public void ShowInterstitial()
+        private void InitializeAds() =>
+            Advertisement.Initialize(
+                _settings.GameId,
+                _settings.TestMode,
+                _settings.EnablePerPlacementMode,
+                this);
+
+        private void InitializePlayers()
         {
-            Advertisement.Show(_interstitialAds);
+            InterstitialPlayer = CreateInterstitial();
+            RewardedPlayer = CreateRewarded();
+            BannerPlayer = CreateBanner();
         }
 
-        public void ShowRewarded()
-        {
-            Advertisement.Show(_rewardedAds);
-        }
-        public void OnUnityAdsDidError(string message)
-        {
-            
-        }
 
-        public void OnUnityAdsDidFinish(string placementId, ShowResult showResult)
-        {
-            if(showResult == ShowResult.Finished)
-            {
-                _callback?.Invoke();
-            }
-        }
+        private IAdsPlayer CreateInterstitial() =>
+            _settings.Interstitial.Enabled
+                ? new InterstitialPlayer(_settings.Interstitial.Id)
+                : (IAdsPlayer)new EmptyPlayer("");
 
-        public void OnUnityAdsDidStart(string placementId)
-        {
-            
-        }
+        private IAdsPlayer CreateRewarded() =>
+            _settings.Rewarded.Enabled
+                ? new RewardedAdsPlayer(_settings.Rewarded.Id)
+                : (IAdsPlayer)new EmptyPlayer("");
 
-        public void OnUnityAdsReady(string placementId)
-        {
-            
-        }
+        private IAdsPlayer CreateBanner() =>
+            new EmptyPlayer("");
+
 
         public void OnInitializationComplete()
         {
-            IsInitialized = true;
-            Initializaed?.Invoke();
+            Log("Initialization complete.");
+            Initialized?.Invoke();
         }
 
-        public void OnInitializationFailed(UnityAdsInitializationError error, string message)
-        {
-            
-        }
+        public void OnInitializationFailed(UnityAdsInitializationError error, string message) =>
+            Error($"Initialization Failed: {error.ToString()} - {message}");
+
+
+        private void Log(string message) => Debug.Log(WrapMessage(message));
+        private void Error(string message) => Debug.LogError(WrapMessage(message));
+        private string WrapMessage(string message) => $"[{GetType().Name}] {message}";
     }
 }
