@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{C6DEEBDF-6545-D446-83AC-DF0A7AF7497E}</ProjectGuid>
+    <ProjectGuid>{0472FB84-7B2C-CE21-7D32-59497DCE6A32}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -84,6 +84,7 @@
     <Compile Include="Assets\_Root\Scripts\Tool\ResourceManagement\ResourcesLoader.cs" />
     <Compile Include="Assets\_Root\Scripts\Profile\ProfilePlayer.cs" />
     <Compile Include="Assets\UpdateManager\Example Scene\Scripts\ExampleUpdateManagerUpdate.cs" />
+    <Compile Include="Assets\_Battle\Scripts\MainWindowObserver.cs" />
     <Compile Include="Assets\_Root\Scripts\Tool\DontDestroyOnLoadObject.cs" />
     <Compile Include="Assets\_Root\Scripts\Features\AbilitySystem\AbilitiesRepository.cs" />
     <Compile Include="Assets\_Root\Scripts\Tool\ResourceManagement\ResourcePath.cs" />
@@ -104,11 +105,13 @@
     <Compile Include="Assets\_Root\Scripts\BaseController.cs" />
     <Compile Include="Assets\_Root\Scripts\Game\Transport\Car\CarView.cs" />
     <Compile Include="Assets\_Root\Scripts\Game\InputLogic\GyroscopeInputView.cs" />
+    <Compile Include="Assets\_Battle\Scripts\DataType.cs" />
     <Compile Include="Assets\_Root\Scripts\Features\Inventory\InventoryModel.cs" />
     <Compile Include="Assets\_Root\Scripts\Features\Shed\Upgrade\UpgradeType.cs" />
     <Compile Include="Assets\_Root\Scripts\Game\InputLogic\FloatInputJoystick.cs" />
     <Compile Include="Assets\_Root\Scripts\Services\Ads\UnityAds\Settings\UnityAdsSettings.cs" />
     <Compile Include="Assets\_Root\Scripts\Features\AbilitySystem\AbilitiesView.cs" />
+    <Compile Include="Assets\_Root\Scripts\Profile\InitialProfilePlayer.cs" />
     <Compile Include="Assets\_Root\Scripts\Features\AbilitySystem\Abilities\StubAbility.cs" />
     <Compile Include="Assets\UpdateManager\Example Scene\Scripts\ExampleUnityUpdate.cs" />
     <Compile Include="Assets\_Root\Scripts\Services\Ads\UnityAds\UnityAdsPlayer.cs" />
@@ -120,6 +123,7 @@
     <Compile Include="Assets\_Root\Scripts\Game\InputLogic\BaseInputView.cs" />
     <Compile Include="Assets\_Root\Scripts\Features\Inventory\InventoryView.cs" />
     <Compile Include="Assets\_Root\Scripts\Features\Inventory\InventoryController.cs" />
+    <Compile Include="Assets\_Battle\Scripts\DataPlayer.cs" />
     <Compile Include="Assets\_Root\Scripts\Features\AbilitySystem\Abilities\JumpAbility.cs" />
     <Compile Include="Assets\_Root\Scripts\Features\AbilitySystem\Abilities\AbilityItemConfig.cs" />
     <Compile Include="Assets\_Root\Scripts\Features\AbilitySystem\AbilitiesController.cs" />
@@ -129,6 +133,7 @@
     <Compile Include="Assets\_Root\Scripts\Services\Ads\UnityAds\EmptyPlayer.cs" />
     <Compile Include="Assets\_Root\Scripts\Tool\Reactive\ISubscriptionProperty.cs" />
     <Compile Include="Assets\_Root\Scripts\Features\AbilitySystem\Abilities\IAbility.cs" />
+    <Compile Include="Assets\_Battle\Scripts\Enemy.cs" />
     <Compile Include="Assets\_Root\Scripts\Features\Shed\ShedController.cs" />
     <Compile Include="Assets\_Root\Scripts\Ui\SettingsMenu\SettingsMenuView.cs" />
     <Compile Include="Assets\_Root\Scripts\Game\InputLogic\InputKeyboard.cs" />
@@ -804,7 +809,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
-      <Project>{05E199BD-D1CF-7A0E-DDF4-436A1F7DC2BF}</Project>
+      <Project>{7E26169A-098B-5034-4FE4-509CB0578C64}</Project>
       <Name>Assembly-CSharp-firstpass</Name>
     </ProjectReference>
   </ItemGroup>
