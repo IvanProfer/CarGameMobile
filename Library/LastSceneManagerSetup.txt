@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/_Rewards/Scenes/Rewards.unity
+- path: Assets/_Tween/Scenes/Tween.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
