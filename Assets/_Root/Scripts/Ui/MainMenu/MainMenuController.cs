@@ -17,7 +17,7 @@ namespace Ui
         {
             _profilePlayer = profilePlayer;
             _view = LoadView(placeForUi);
-            _view.Init(StartGame, Settings, Shed, Reward, Buy);
+            _view.Init(StartGame, Settings, Shed, Reward, Buy, DailyReward, ExitGame);
         }
 
         private MainMenuView LoadView(Transform placeForUi)
@@ -102,6 +102,18 @@ namespace Ui
         {
             UnsubscribeRewardedPlayer();
             Log("Receiving a reward for ads has been interrupted!");
+        }
+
+
+        private void DailyReward() =>
+            _profilePlayer.CurrentState.Value = GameState.DailyReward;
+
+        private void ExitGame()
+        {
+#if UNITY_EDITOR
+            UnityEditor.EditorApplication.isPlaying = false;
+#endif
+            Application.Quit();
         }
     }
 }
